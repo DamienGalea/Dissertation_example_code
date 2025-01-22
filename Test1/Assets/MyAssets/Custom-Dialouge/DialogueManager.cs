@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour
     public List<GameObject> npcList = new List<GameObject>();
 
     [SerializeField]
-    private DialogueStateManager stateManager;
+    private NewState stateManager; //DialogueStateManager
 
     public void Start()
     {
@@ -47,11 +47,17 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayDialogue(DialogueNode node, string npcId)
     {
+        if (node.responseOptions == null || node.responseOptions.Length == 0)
+        {
+            Debug.LogError($"No response options available for node: {node?.name ?? "Unknown Node"}");
+            EndDialogue(); // Optionally end the dialogue if no responses exist
+            return;
+        }
 
 
         dialogueText.text = node.dialogueText;
 
-
+        
 
         for (int i = 0; i < responseButtons.Length; i++)
         {
@@ -81,9 +87,16 @@ public class DialogueManager : MonoBehaviour
     {
         DialogueOption selectedOption = currentNode.responseOptions[index];
 
-        stateManager.SaveResponse(npcId, selectedOption.responseText, currentNode.npc_State);
-        
+        stateManager.SaveDialogue(
+        npcId,
+        currentNode.dialogueText,
+        currentNode.npc_State,
+        selectedOption.responseText,
+        selectedOption.playerEmotion
+        );
+
         Debug.Log($"Saved response for NPC: {npcId}: {selectedOption.responseText} (Emotion: {selectedOption.playerEmotion})");
+
 
         SetButtonsVisibility(false);
         StartCoroutine(ShowResponseThenDialogue(selectedOption, npcId));

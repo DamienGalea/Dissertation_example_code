@@ -755,7 +755,7 @@ MonoBehaviour:
   npcId: M3
   text: {fileID: 0}
   React: 0
-  stateManager: {fileID: 577694002}
+  stateManager: {fileID: 0}
 --- !u!1 &577693999
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,7 +797,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 577693999}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e5a74b5387da6b41aa3419758144f23, type: 3}
+  m_Script: {fileID: 11500000, guid: c6a55354fad36a1499cf0cbe9e8021cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &649094120
@@ -1671,7 +1671,7 @@ MonoBehaviour:
   npcId: M2
   text: {fileID: 244417006}
   React: 0
-  stateManager: {fileID: 577694002}
+  stateManager: {fileID: 0}
 --- !u!4 &1117493210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8878942870483524012, guid: 5b5d39610ebb2894ea8e05884fc7b807, type: 3}
@@ -2147,7 +2147,7 @@ MonoBehaviour:
   npcId: Boss
   text: {fileID: 0}
   React: 0
-  stateManager: {fileID: 577694002}
+  stateManager: {fileID: 0}
 --- !u!1001 &1846244423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2815,7 +2815,7 @@ MonoBehaviour:
   npcId: N
   text: {fileID: 0}
   React: 0
-  stateManager: {fileID: 577694002}
+  stateManager: {fileID: 0}
 --- !u!114 &2120446103
 MonoBehaviour:
   m_ObjectHideFlags: 0
