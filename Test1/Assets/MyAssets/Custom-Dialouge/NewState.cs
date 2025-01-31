@@ -23,7 +23,14 @@ public class NewState : MonoBehaviour
 
         Debug.Log($"JSON file will be saved at: {jsonFilePath}");
 
-        LoadDialogueHistory();
+        ClearAllDialogueHistories();
+    }
+
+    public void ClearAllDialogueHistories()
+    {
+        dialogueHistories.Clear();
+        SaveDialogueHistory();
+        Debug.Log("Cleared all dialogue histories.");
     }
 
     public void SaveDialogue(string npcId, string npcText, NPC_State npcEmotion, string playerText, NPC_State playerEmotion)
@@ -94,7 +101,7 @@ public class NPCDialogueHistory
 }
 
 [System.Serializable]
-public class DialogueEntry
+public class DialogueEntry  //this needs to be split npc and player not all together
 {
     public string npcText;
     public string npcEmotion;

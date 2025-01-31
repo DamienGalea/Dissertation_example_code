@@ -6,7 +6,7 @@ using UnityEngine;
 public class DialogueNode : ScriptableObject
 {
     public bool npc_mod_React;
-    public string dialogueText;
+    public string NPC_Text;
     public NPC_State npc_State;
     public DialogueOption[] responseOptions;
 

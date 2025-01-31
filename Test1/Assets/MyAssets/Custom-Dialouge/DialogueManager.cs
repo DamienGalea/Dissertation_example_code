@@ -51,11 +51,15 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.LogError($"No response options available for node: {node?.name ?? "Unknown Node"}");
             EndDialogue(); // Optionally end the dialogue if no responses exist
+           
+
             return;
         }
 
+        
+        
 
-        dialogueText.text = node.dialogueText;
+        dialogueText.text = node.NPC_Text;
 
         
 
@@ -89,13 +93,13 @@ public class DialogueManager : MonoBehaviour
 
         stateManager.SaveDialogue(
         npcId,
-        currentNode.dialogueText,
+        currentNode.NPC_Text,
         currentNode.npc_State,
-        selectedOption.responseText,
+        selectedOption.PlayerText,
         selectedOption.playerEmotion
         );
 
-        Debug.Log($"Saved response for NPC: {npcId}: {selectedOption.responseText} (Emotion: {selectedOption.playerEmotion})");
+        Debug.Log($"Saved response for NPC: {npcId}: {selectedOption.PlayerText} (Emotion: {selectedOption.playerEmotion})");
 
 
         SetButtonsVisibility(false);
@@ -118,21 +122,21 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator ShowResponseThenDialogue(DialogueOption selectedOption, string npcId)
     {
         // Display the player's response text
-        dialogueText.text = selectedOption.responseText;
+        dialogueText.text = ("Player: " + selectedOption.PlayerText);
 
 
         // Wait for a short delay
         yield return new WaitForSeconds(2f);
 
         // Select a random NPC node if available
-        if (selectedOption.NPCnodes != null && selectedOption.NPCnodes.Length > 0)
+        if (selectedOption.NPC_Choices != null && selectedOption.NPC_Choices.Length > 0)
         {
-            DialogueNode randomNode = selectedOption.NPCnodes[Random.Range(0, selectedOption.NPCnodes.Length)];
+            DialogueNode randomNode = selectedOption.NPC_Choices[Random.Range(0, selectedOption.NPC_Choices.Length)];
             Debug.Log($"Randomly selected NPC Node: {randomNode.name}");
 
 
             // Display the NPC's dialogue text
-            dialogueText.text = randomNode.dialogueText;
+            dialogueText.text = randomNode.NPC_Text;
 
             // Wait for another delay before allowing further interaction
             yield return new WaitForSeconds(2f);
@@ -145,7 +149,7 @@ public class DialogueManager : MonoBehaviour
             SetButtonsVisibility(false);
             EndDialogue();
         }
-        SetButtonsVisibility(true);
+        //SetButtonsVisibility(true);
     }
 
     private IEnumerator EndDialogueAfterDelay()

@@ -10,15 +10,20 @@ public partial class StateAnimationAction : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> NPC;
     [SerializeReference] public BlackboardVariable<Animator> Animation;
-    [SerializeReference] public BlackboardVariable<State_Check> State;
+    [SerializeReference] public BlackboardVariable<State_Check> state;
 
     NPC_State current_state;
 
     protected override Status OnStart()
     {
-        State.Value.Initialize(NPC);
+       
 
-        current_state = State.Value.CurrentState();
+        //Debug.Log("StateAnimationAction: Initializing State_Check for NPC: " + NPC.Value.name);
+
+        state.Value.Initialize(NPC);
+
+        current_state = state.Value.CurrentState();
+        Debug.Log("StateAnimationAction: Current state retrieved: " + current_state);
 
         return Status.Success;
     }
@@ -30,8 +35,6 @@ public partial class StateAnimationAction : Action
     }
     protected override Status OnUpdate()
     {
-        
-
         if (current_state == NPC_State.DEATH)
         {
             Debug.Log("Maoer");

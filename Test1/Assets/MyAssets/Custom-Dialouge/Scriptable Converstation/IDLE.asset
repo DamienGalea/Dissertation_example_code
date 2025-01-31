@@ -10,21 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e1e334d44c09794e99ebf865a381c26, type: 3}
-  m_Name: A1
+  m_Name: IDLE
   m_EditorClassIdentifier: 
-  npc_mod_React: 0
-  dialogueText: Damn
-  npc_State: 0
+  npc_mod_React: 1
+  NPC_Text: How was your day
+  npc_State: 1
   responseOptions:
-  - responseText: Hey tere friend
+  - PlayerText: 'Good '
     overallText: Nice
-    playerEmotion: 3
-    nextNode: {fileID: 0}
-    NPCnodes:
-    - {fileID: 11400000, guid: b8b00128a89767342965d17fff6c4b65, type: 2}
-  - responseText: Go away
+    playerEmotion: 0
+    NPC_Choices: []
+  - PlayerText: Could be better
     overallText: Mad
     playerEmotion: 0
-    nextNode: {fileID: 0}
-    NPCnodes:
-    - {fileID: 11400000, guid: 908ce5177a44b1a4780992baf6ee6d67, type: 2}
+    NPC_Choices: []

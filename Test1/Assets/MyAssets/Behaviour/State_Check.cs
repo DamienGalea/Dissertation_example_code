@@ -9,19 +9,14 @@ public class State_Check : MonoBehaviour
     public BehaviorGraphAgent behaviorAgent;
     public BlackboardVariable<NPC_State> blackboardVariable;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-       
-    }
+    //Create myself
 
-    // Update is called once per frame
-    void Update()
+    public void Start()
     {
-
         
     }
-    
+
+
     public void Initialize(GameObject NPC)
     {
         behaviorAgent = NPC.GetComponent<BehaviorGraphAgent>();
@@ -48,7 +43,7 @@ public class State_Check : MonoBehaviour
 
     public NPC_State CurrentState()
     {
-        behaviorAgent.BlackboardReference.GetVariable("NPC_State", out blackboardVariable);
+        behaviorAgent.BlackboardReference.GetVariable("NPCStateVariable", out blackboardVariable); // "Variable" must be the name of the variable in the garph else a null error appears 
         var state = blackboardVariable.Value;
         Debug.Log("NPC is" + state);
         return state;

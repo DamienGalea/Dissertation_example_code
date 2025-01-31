@@ -10,9 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e1e334d44c09794e99ebf865a381c26, type: 3}
-  m_Name: A3
+  m_Name: Begin
   m_EditorClassIdentifier: 
-  npc_mod_React: 1
-  dialogueText: Why mad
+  npc_mod_React: 0
+  NPC_Text: Hello there
   npc_State: 0
-  responseOptions: []
+  responseOptions:
+  - PlayerText: 'Hi '
+    overallText: Nice
+    playerEmotion: 3
+    NPC_Choices: []
+  - PlayerText: What ?
+    overallText: Mad
+    playerEmotion: 0
+    NPC_Choices:
+    - {fileID: 11400000, guid: 908ce5177a44b1a4780992baf6ee6d67, type: 2}

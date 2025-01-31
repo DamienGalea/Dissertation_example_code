@@ -10,21 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e1e334d44c09794e99ebf865a381c26, type: 3}
-  m_Name: A2
+  m_Name: KILL
   m_EditorClassIdentifier: 
-  npc_mod_React: 1
-  dialogueText: That good
+  npc_mod_React: 0
+  NPC_Text: Why are you mad
   npc_State: 0
   responseOptions:
-  - responseText: Yea bro lets hang out
-    overallText: gg
+  - PlayerText: Dont talk
+    overallText: Angry
     playerEmotion: 0
-    nextNode: {fileID: 0}
-    NPCnodes:
-    - {fileID: 11400000, guid: 908ce5177a44b1a4780992baf6ee6d67, type: 2}
-  - responseText: are you free saturday
-    overallText: Sat
+    NPC_Choices: []
+  - PlayerText: Something happend
+    overallText: Sad
     playerEmotion: 0
-    nextNode: {fileID: 0}
-    NPCnodes:
-    - {fileID: 11400000, guid: 908ce5177a44b1a4780992baf6ee6d67, type: 2}
+    NPC_Choices: []

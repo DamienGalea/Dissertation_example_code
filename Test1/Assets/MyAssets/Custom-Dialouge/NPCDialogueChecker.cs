@@ -15,15 +15,17 @@ public class NPCDialogueChecker : MonoBehaviour
     private void Update()
     {
         // Debug check for NPC IDs starting with "M"
-        /*if ( React == true && npcId.StartsWith("M"))
+        if ( React == true && npcId.StartsWith("M"))
         {
             Debug.Log($"NPC ID starts with M: {npcId}");
             // Uncomment to automatically check dialogue on Update
             // CheckDialogue();
-        }*/
+        }
 
 
     }
+
+
 
     public void CheckDialogue()
     {
