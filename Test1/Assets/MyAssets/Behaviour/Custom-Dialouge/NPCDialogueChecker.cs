@@ -10,7 +10,7 @@ public class NPCDialogueChecker : MonoBehaviour
     public bool React;
 
     [SerializeField]
-    private DialogueStateManager stateManager; // Reference to the DialogueStateManager
+    //private DialogueStateManager stateManager; // Reference to the DialogueStateManager
 
     private void Update()
     {
@@ -27,7 +27,7 @@ public class NPCDialogueChecker : MonoBehaviour
 
 
 
-    public void CheckDialogue()
+   /* public void CheckDialogue()
     {
         // Check if there is a response from the "Boss" NPC
         if (stateManager.HasResponse("Boss") && React == true && npcId.StartsWith("M"))
@@ -46,7 +46,7 @@ public class NPCDialogueChecker : MonoBehaviour
                 text.text = $"NPC {npcId} says: 'I have no memory of Boss's words.'";
             }
         }
-    }
+    }*/
 
     private void ReactToEmotion(NPC_State playerEmotion)
     {

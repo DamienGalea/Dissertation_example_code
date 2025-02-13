@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 public class Talking : MonoBehaviour
 {
     
-        public DialogueNode initialNode; // Dialogue node to start from
+        /*public DialogueNode initialNode; // Dialogue node to start from
 
         [SerializeField]
         public DialogueManager dialogueManager;
@@ -42,7 +42,7 @@ public class Talking : MonoBehaviour
             {
                 isPlayerInRange = false;
             }
-        }
+        }*/
     }
 
 

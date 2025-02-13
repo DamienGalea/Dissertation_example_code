@@ -41,8 +41,8 @@ MonoBehaviour:
   - rid: 5857691630745944372
   - rid: 5857691630745944378
   - rid: 5857691630745944400
-  - rid: 5857691630745944407
-  m_VersionTimestamp: 638737845473254219
+  - rid: 5857691791371272275
+  m_VersionTimestamp: 638750696722194662
   m_DebugInfo: {fileID: -751530640765253369}
   m_RuntimeGraph: {fileID: 1363462337815156842}
   AssetID:
@@ -83,6 +83,13 @@ MonoBehaviour:
         m_SerializableType: Unity.Behavior.BlackboardVariable, Unity.Behavior, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
       Tooltip: 
+    NamedChildren: []
+  - Name: Sequence
+    Story: 
+    RuntimeTypeID:
+      m_Value0: 10181448252506100447
+      m_Value1: 8737116843063128493
+    Variables: []
     NamedChildren: []
   - Name: StateAnimation
     Story: '[NPC] [state] changed: [Animation] updated'
@@ -137,6 +144,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 5857691630745944316
       type: {class: StartNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
@@ -164,11 +173,11 @@ MonoBehaviour:
         m_NodeModel:
           rid: 5857691630745944316
         m_Connections:
-        - rid: 5857691630745944408
+        - rid: 5857691791371272276
     - rid: 5857691630745944322
       type: {class: SwitchNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
-        Position: {x: -1114.8759, y: 209.43314}
+        Position: {x: -1119.813, y: 207.45842}
         ID:
           m_Value0: 12957666079108481024
           m_Value1: 1943586851818914315
@@ -776,133 +785,43 @@ MonoBehaviour:
         Parents: []
         PortModels: []
         Text: Only need the npcstatevarialbe to work
-    - rid: 5857691630745944407
-      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+    - rid: 5857691791371272275
+      type: {class: CompositeNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
-        Position: {x: -3.9718478, y: 216.89186}
+        Position: {x: 0.11373299, y: 124.4371}
         ID:
-          m_Value0: 17387264604526301764
-          m_Value1: 3131584034440348133
+          m_Value0: 6405018765743842491
+          m_Value1: 659971183926467970
         Parents: []
         PortModels:
-        - rid: 5857691630745944408
-        - rid: 5857691630745944409
+        - rid: 5857691791371272276
+        - rid: 5857691791371272277
         NodeType:
-          m_SerializableType: StateAnimationAction, Assembly-CSharp, Version=0.0.0.0,
+          m_SerializableType: Unity.Behavior.SequenceComposite, Unity.Behavior, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
         NodeTypeID:
-          m_Value0: 4980060390311452386
-          m_Value1: 2649827435913533735
-        m_FieldValues:
-        - rid: 5857691630745944410
-        - rid: 5857691630745944411
-        - rid: 5857691630745944502
-    - rid: 5857691630745944408
+          m_Value0: 10181448252506100447
+          m_Value1: 8737116843063128493
+        m_FieldValues: []
+    - rid: 5857691791371272276
       type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
         m_Name: InputPort
         m_PortDataFlowType: 0
         m_IsFloating: 0
         m_NodeModel:
-          rid: 5857691630745944407
+          rid: 5857691791371272275
         m_Connections:
         - rid: 5857691630745944317
-    - rid: 5857691630745944409
+    - rid: 5857691791371272277
       type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
         m_Name: OutputPort
         m_PortDataFlowType: 1
         m_IsFloating: 0
         m_NodeModel:
-          rid: 5857691630745944407
+          rid: 5857691791371272275
         m_Connections: []
-    - rid: 5857691630745944410
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: NPC
-        Type:
-          m_SerializableType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
-        LocalValue:
-          rid: 5857691630745944413
-        LinkedVariable:
-          rid: 5857691630745944416
-    - rid: 5857691630745944411
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: Animation
-        Type:
-          m_SerializableType: UnityEngine.Animator, UnityEngine.AnimationModule,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        LocalValue:
-          rid: 5857691630745944414
-        LinkedVariable:
-          rid: 5857691630745944476
-    - rid: 5857691630745944413
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: {fileID: 0}
-    - rid: 5857691630745944414
-      type: {class: 'BlackboardVariable`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: {fileID: 0}
-    - rid: 5857691630745944416
-      type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
-      data:
-        ID:
-          m_Value0: 1
-          m_Value1: 0
-        Name: Self
-        IsExposed: 1
-        m_IsShared: 0
-        m_Value: {fileID: 0}
-    - rid: 5857691630745944476
-      type: {class: 'TypedVariableModel`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
-      data:
-        ID:
-          m_Value0: 1685815949147924632
-          m_Value1: 9930787174812271952
-        Name: CharacterAnims
-        IsExposed: 1
-        m_IsShared: 0
-        m_Value: {fileID: 0}
-    - rid: 5857691630745944502
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: state
-        Type:
-          m_SerializableType: State_Check, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-        LocalValue:
-          rid: 5857691630745944503
-        LinkedVariable:
-          rid: 5857691630745944504
-    - rid: 5857691630745944503
-      type: {class: 'BlackboardVariable`1[[State_Check, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: {fileID: 0}
-    - rid: 5857691630745944504
-      type: {class: 'TypedVariableModel`1[[State_Check, Assembly-CSharp]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
-      data:
-        ID:
-          m_Value0: 11600524974910636602
-          m_Value1: 13674523855226962012
-        Name: StateCheckScript
-        IsExposed: 1
-        m_IsShared: 0
-        m_Value: {fileID: 0}
 --- !u!114 &1363462337815156842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -916,72 +835,67 @@ MonoBehaviour:
   m_Name: Ex1
   m_EditorClassIdentifier: 
   Graphs:
-  - rid: 5857691630745944505
+  - rid: 5857691791371272278
   RootGraph:
-    rid: 5857691630745944505
+    rid: 5857691791371272278
   m_DebugInfo: {fileID: -751530640765253369}
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 5857691630745944505
+    - rid: 5857691791371272278
       type: {class: BehaviorGraphModule, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         AuthoringAssetID:
           m_Value0: 11857776837191070561
           m_Value1: 15233522746638247000
-        m_DebugInfo: {fileID: 0}
+        m_DebugInfo: {fileID: -751530640765253369}
         Root:
-          rid: 5857691630745944506
+          rid: 5857691791371272279
         BlackboardReference:
-          rid: 5857691630745944507
+          rid: 5857691791371272280
         BlackboardGroupReferences: []
-        m_VersionTimestamp: 638737845473254219
-    - rid: 5857691630745944506
+        m_VersionTimestamp: 638750696722194662
+    - rid: 5857691791371272279
       type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
           m_Value0: 6283567518054180523
           m_Value1: 10326473867871804046
         Graph:
-          rid: 5857691630745944505
+          rid: 5857691791371272278
         m_Parent:
           rid: -2
         m_Child:
-          rid: 5857691630745944508
+          rid: 5857691791371272281
         Repeat: 1
-    - rid: 5857691630745944507
+    - rid: 5857691791371272280
       type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         m_Blackboard:
-          rid: 5857691630745944509
+          rid: 5857691791371272282
         m_Source: {fileID: 6350968462436949616}
-    - rid: 5857691630745944508
-      type: {class: StateAnimationAction, ns: , asm: Assembly-CSharp}
+    - rid: 5857691791371272281
+      type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
-          m_Value0: 17387264604526301764
-          m_Value1: 3131584034440348133
+          m_Value0: 6405018765743842491
+          m_Value1: 659971183926467970
         Graph:
-          rid: 5857691630745944505
+          rid: 5857691791371272278
         m_Parent:
-          rid: 5857691630745944506
-        NPC:
-          rid: 5857691630745944510
-        Animation:
-          rid: 5857691630745944511
-        state:
-          rid: 5857691630745944512
-    - rid: 5857691630745944509
+          rid: 5857691791371272279
+        m_Children: []
+    - rid: 5857691791371272282
       type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         m_Variables:
-        - rid: 5857691630745944510
-        - rid: 5857691630745944513
-        - rid: 5857691630745944512
-        - rid: 5857691630745944511
-    - rid: 5857691630745944510
+        - rid: 5857691791371272283
+        - rid: 5857691791371272284
+        - rid: 5857691791371272285
+        - rid: 5857691791371272286
+    - rid: 5857691791371272283
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -989,23 +903,7 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 0}
-    - rid: 5857691630745944511
-      type: {class: 'BlackboardVariable`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 1685815949147924632
-          m_Value1: 9930787174812271952
-        Name: CharacterAnims
-        m_Value: {fileID: 0}
-    - rid: 5857691630745944512
-      type: {class: 'BlackboardVariable`1[[State_Check, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 11600524974910636602
-          m_Value1: 13674523855226962012
-        Name: StateCheckScript
-        m_Value: {fileID: 0}
-    - rid: 5857691630745944513
+    - rid: 5857691791371272284
       type: {class: 'BlackboardVariable`1[[NPC_State, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -1013,6 +911,22 @@ MonoBehaviour:
           m_Value1: 18326918438398908641
         Name: NPCStateVariable
         m_Value: 0
+    - rid: 5857691791371272285
+      type: {class: 'BlackboardVariable`1[[State_Check, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 11600524974910636602
+          m_Value1: 13674523855226962012
+        Name: StateCheckScript
+        m_Value: {fileID: 0}
+    - rid: 5857691791371272286
+      type: {class: 'BlackboardVariable`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1685815949147924632
+          m_Value1: 9930787174812271952
+        Name: CharacterAnims
+        m_Value: {fileID: 0}
 --- !u!114 &6350968462436949616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,15 +939,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c02bb70996b49eba31d0c206e28da24, type: 3}
   m_Name: Ex1 Blackboard
   m_EditorClassIdentifier: 
-  VersionTimestamp: 638737845474456786
+  VersionTimestamp: 638741059016111904
   AssetID:
     m_Value0: 11857776837191070561
     m_Value1: 15233522746638247000
   m_Blackboard:
     m_Variables:
     - rid: 5857691630745944396
-    - rid: 5857691630745944397
-    - rid: 5857691630745944438
     - rid: 5857691630745944486
   m_SharedBlackboardVariableGuids: []
   references:
@@ -1046,22 +958,6 @@ MonoBehaviour:
           m_Value0: 1
           m_Value1: 0
         Name: Self
-        m_Value: {fileID: 0}
-    - rid: 5857691630745944397
-      type: {class: 'BlackboardVariable`1[[NPC_State, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 2136690266583531605
-          m_Value1: 18326918438398908641
-        Name: NPCStateVariable
-        m_Value: 0
-    - rid: 5857691630745944438
-      type: {class: 'BlackboardVariable`1[[State_Check, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 11600524974910636602
-          m_Value1: 13674523855226962012
-        Name: StateCheckScript
         m_Value: {fileID: 0}
     - rid: 5857691630745944486
       type: {class: 'BlackboardVariable`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
@@ -1088,10 +984,8 @@ MonoBehaviour:
     m_Value1: 15233522746638247000
   m_Variables:
   - rid: 5857691630745944318
-  - rid: 5857691630745944326
-  - rid: 5857691630745944427
   - rid: 5857691630745944475
-  m_VersionTimestamp: 638737845474456786
+  m_VersionTimestamp: 638750696722194662
   m_CommandBuffer:
     m_Commands: []
   m_RuntimeBlackboardAsset: {fileID: 6350968462436949616}
@@ -1105,26 +999,6 @@ MonoBehaviour:
           m_Value0: 1
           m_Value1: 0
         Name: Self
-        IsExposed: 1
-        m_IsShared: 0
-        m_Value: {fileID: 0}
-    - rid: 5857691630745944326
-      type: {class: 'TypedVariableModel`1[[NPC_State, Assembly-CSharp]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
-      data:
-        ID:
-          m_Value0: 2136690266583531605
-          m_Value1: 18326918438398908641
-        Name: NPCStateVariable
-        IsExposed: 1
-        m_IsShared: 0
-        m_Value: 0
-    - rid: 5857691630745944427
-      type: {class: 'TypedVariableModel`1[[State_Check, Assembly-CSharp]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
-      data:
-        ID:
-          m_Value0: 11600524974910636602
-          m_Value1: 13674523855226962012
-        Name: StateCheckScript
         IsExposed: 1
         m_IsShared: 0
         m_Value: {fileID: 0}
