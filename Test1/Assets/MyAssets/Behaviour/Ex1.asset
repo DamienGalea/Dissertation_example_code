@@ -42,7 +42,7 @@ MonoBehaviour:
   - rid: 5857691630745944378
   - rid: 5857691630745944400
   - rid: 5857691791371272275
-  m_VersionTimestamp: 638750696722194662
+  m_VersionTimestamp: 638757379169408707
   m_DebugInfo: {fileID: -751530640765253369}
   m_RuntimeGraph: {fileID: 1363462337815156842}
   AssetID:
@@ -91,6 +91,23 @@ MonoBehaviour:
       m_Value1: 8737116843063128493
     Variables: []
     NamedChildren: []
+  - Name: Set Variable Value
+    Story: 'Set [Variable] value to [Value]'
+    RuntimeTypeID:
+      m_Value0: 5494721648866555964
+      m_Value1: 18024545711220129068
+    Variables:
+    - Name: Variable
+      Type:
+        m_SerializableType: Unity.Behavior.BlackboardVariable, Unity.Behavior, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      Tooltip: 
+    - Name: Value
+      Type:
+        m_SerializableType: Unity.Behavior.BlackboardVariable, Unity.Behavior, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      Tooltip: 
+    NamedChildren: []
   - Name: StateAnimation
     Story: '[NPC] [state] changed: [Animation] updated'
     RuntimeTypeID:
@@ -113,6 +130,15 @@ MonoBehaviour:
           PublicKeyToken=null
       Tooltip: 
     NamedChildren: []
+  - Name: Conditional Branch
+    Story: 
+    RuntimeTypeID:
+      m_Value0: 12334964803190848789
+      m_Value1: 14608808926743427008
+    Variables: []
+    NamedChildren:
+    - True
+    - False
   - Name: Log Message
     Story: Log [message] to the console
     RuntimeTypeID:
@@ -144,8 +170,6 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
     - rid: 5857691630745944316
       type: {class: StartNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
@@ -835,67 +859,65 @@ MonoBehaviour:
   m_Name: Ex1
   m_EditorClassIdentifier: 
   Graphs:
-  - rid: 5857691791371272278
+  - rid: 1935778667678400649
   RootGraph:
-    rid: 5857691791371272278
+    rid: 1935778667678400649
   m_DebugInfo: {fileID: -751530640765253369}
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 5857691791371272278
+    - rid: 1935778667678400649
       type: {class: BehaviorGraphModule, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         AuthoringAssetID:
           m_Value0: 11857776837191070561
           m_Value1: 15233522746638247000
-        m_DebugInfo: {fileID: -751530640765253369}
+        m_DebugInfo: {fileID: 0}
         Root:
-          rid: 5857691791371272279
+          rid: 1935778667678400650
         BlackboardReference:
-          rid: 5857691791371272280
+          rid: 1935778667678400651
         BlackboardGroupReferences: []
-        m_VersionTimestamp: 638750696722194662
-    - rid: 5857691791371272279
+        m_VersionTimestamp: 638757379169408707
+    - rid: 1935778667678400650
       type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
           m_Value0: 6283567518054180523
           m_Value1: 10326473867871804046
         Graph:
-          rid: 5857691791371272278
+          rid: 1935778667678400649
         m_Parent:
           rid: -2
         m_Child:
-          rid: 5857691791371272281
+          rid: 1935778667678400652
         Repeat: 1
-    - rid: 5857691791371272280
+    - rid: 1935778667678400651
       type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         m_Blackboard:
-          rid: 5857691791371272282
+          rid: 1935778667678400653
         m_Source: {fileID: 6350968462436949616}
-    - rid: 5857691791371272281
+    - rid: 1935778667678400652
       type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
           m_Value0: 6405018765743842491
           m_Value1: 659971183926467970
         Graph:
-          rid: 5857691791371272278
+          rid: 1935778667678400649
         m_Parent:
-          rid: 5857691791371272279
+          rid: 1935778667678400650
         m_Children: []
-    - rid: 5857691791371272282
+    - rid: 1935778667678400653
       type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         m_Variables:
-        - rid: 5857691791371272283
-        - rid: 5857691791371272284
-        - rid: 5857691791371272285
-        - rid: 5857691791371272286
-    - rid: 5857691791371272283
+        - rid: 1935778667678400654
+        - rid: 1935778667678400655
+    - rid: 1935778667678400654
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -903,23 +925,7 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 0}
-    - rid: 5857691791371272284
-      type: {class: 'BlackboardVariable`1[[NPC_State, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 2136690266583531605
-          m_Value1: 18326918438398908641
-        Name: NPCStateVariable
-        m_Value: 0
-    - rid: 5857691791371272285
-      type: {class: 'BlackboardVariable`1[[State_Check, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 11600524974910636602
-          m_Value1: 13674523855226962012
-        Name: StateCheckScript
-        m_Value: {fileID: 0}
-    - rid: 5857691791371272286
+    - rid: 1935778667678400655
       type: {class: 'BlackboardVariable`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -939,7 +945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c02bb70996b49eba31d0c206e28da24, type: 3}
   m_Name: Ex1 Blackboard
   m_EditorClassIdentifier: 
-  VersionTimestamp: 638741059016111904
+  VersionTimestamp: 638757379174925153
   AssetID:
     m_Value0: 11857776837191070561
     m_Value1: 15233522746638247000
@@ -985,7 +991,7 @@ MonoBehaviour:
   m_Variables:
   - rid: 5857691630745944318
   - rid: 5857691630745944475
-  m_VersionTimestamp: 638750696722194662
+  m_VersionTimestamp: 638757379174925153
   m_CommandBuffer:
     m_Commands: []
   m_RuntimeBlackboardAsset: {fileID: 6350968462436949616}
