@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1740576148",
+        "python_version": "3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\denis\\OneDrive\\Documents\\git\\Dissertation_example_code\\Test1\\MLtest\\Scripts\\mlagents-learn --run-id =ScaredTest1",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.6.0+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1740576153"
+    },
+    "total": 5.155094999999999,
+    "count": 1,
+    "self": 0.004459699999998179,
+    "children": {
+        "run_training.setup": {
+            "total": 0.13971579999999983,
+            "count": 1,
+            "self": 0.13971579999999983
+        },
+        "TrainerController.start_learning": {
+            "total": 5.010919500000001,
+            "count": 1,
+            "self": 0.00016940000000165156,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 5.010712699999999,
+                    "count": 1,
+                    "self": 5.010712699999999
+                },
+                "TrainerController._save_models": {
+                    "total": 3.740000000007626e-05,
+                    "count": 1,
+                    "self": 3.740000000007626e-05
+                }
+            }
+        }
+    }
+}

@@ -23,6 +23,7 @@ public class Npc_v1 : MonoBehaviour
     public BehaviorGraphAgent behaviourAgent;
     public BlackboardVariable<Emotion_States_NPC> bv_EmotionState;  //set something similar to the bool and see if varial.value == true works 
     public BlackboardVariable<Boolean> bv_hasTalked;
+    public BlackboardVariable<Boolean> bv_playerIsInRange;
 
 
 
@@ -33,19 +34,25 @@ public class Npc_v1 : MonoBehaviour
         playerScript = player.GetComponent<Player>();
         behaviourAgent = GetComponent<BehaviorGraphAgent>();
 
-        // Behaviour variables being set:
-      
+        currentState = Emotion_States_NPC.Sad;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E) && hasTalked == false) //&& bv_hasTalked.Value == false
+        PlayerRange(isPlayerInRange);
+
+        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E) && hasTalked == false) 
         {
+            
             hasTalked = true;
-            currentState = Emotion_States_NPC.Afraid;
+            
 
             SetEmotionInBehaviourGraph(currentState); //changing the enum in the graph
+            Debug.Log("Talked");
+
+            
 
         }
         else if (isPlayerInRange && hasTalked == true)
@@ -53,6 +60,12 @@ public class Npc_v1 : MonoBehaviour
 
             SetConverstaion(hasTalked); //changing the boolean
 
+        }
+        else if(isPlayerInRange && currentState == Emotion_States_NPC.Sad) //For sadness if the player is range and the npc is sad even if the conversation didn't happen yet the npc wont talk
+        {
+            hasTalked = true;
+            SetEmotionInBehaviourGraph(currentState);
+            SetConverstaion(hasTalked);
         }
 
 
@@ -71,22 +84,15 @@ public class Npc_v1 : MonoBehaviour
         bv_hasTalked.Value = _talked;
     }
 
-
-    void OnTriggerEnter(Collider other)
+    public void PlayerRange(bool _playerIsInRange)
     {
-        if (other.CompareTag("Player"))
-        {
-            isPlayerInRange = true;
-        }
+       
+        behaviourAgent.BlackboardReference.GetVariable("isPlayerInRange", out bv_playerIsInRange);
+        bv_playerIsInRange.Value = _playerIsInRange;
     }
 
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            isPlayerInRange = false;
-        }
-    }
+
+    
 
 
 }
